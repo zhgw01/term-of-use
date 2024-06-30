@@ -21,6 +21,12 @@ jobs:
         URL: https://policies.google.com/terms?hl=zh-CN&fg=1  # Replace with the URL you want to save
       run: |
         curl "$URL" > google-terms.html
+
+    - name: Print Working Directory
+      run: pwd  # On Unix-like system
+
+    - name: git status
+      run: git status
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
