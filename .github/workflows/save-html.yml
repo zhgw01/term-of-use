@@ -27,6 +27,3 @@ jobs:
       with:
         commit_message: Update HTML
         file_pattern: '**/*.html'
-
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
