@@ -27,6 +27,12 @@ jobs:
 
     - name: git status
       run: git status
+
+    - name: git add
+      run: git add "**/*.html"
+
+    - name: git status again
+      run: git status
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
