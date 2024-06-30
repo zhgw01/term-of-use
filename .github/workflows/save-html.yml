@@ -15,12 +15,12 @@ jobs:
       
     - name: Save HTML
       env:
-        URL: https://www.temu.com/terms-of-use.html?region_id=210  # Replace with the URL you want to save
+        URL: https://policies.google.com/terms?hl=zh-CN&fg=1  # Replace with the URL you want to save
       run: |
-        curl "$URL" > region-201.html
+        curl "$URL" > google-terms.html
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update HTML
-        file_pattern: region-201.html
+        file_pattern: google-terms.html
