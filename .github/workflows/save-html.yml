@@ -29,7 +29,7 @@ jobs:
       run: git status
 
     - name: git add
-      run: git add "**/*.html"
+      run: git add .
 
     - name: git status again
       run: git status
