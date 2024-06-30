@@ -6,7 +6,7 @@ jobs:
   fetch-file:
     runs-on: ubuntu-latest
     steps:
-      - uses: foxtrotperry/fetch-file-action@v0
+      - uses: foxtrotperry/fetch-file-action@v0-alpha
         with:
           url: 'https://policies.google.com/terms?hl=zh-CN&fg=1'
           path: './google'
