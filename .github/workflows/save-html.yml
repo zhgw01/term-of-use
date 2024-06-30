@@ -1,0 +1,26 @@
+name: Save HTML
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+
+jobs:
+  save-html:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Save HTML
+      env:
+        URL: https://www.temu.com/terms-of-use.html?region_id=210  # Replace with the URL you want to save
+      run: |
+        curl "$URL" > region-201.html
+        
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update HTML
+        file_pattern: index.html
