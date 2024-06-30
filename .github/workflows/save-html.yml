@@ -23,4 +23,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update HTML
-        file_pattern: index.html
+        file_pattern: region-201.html
