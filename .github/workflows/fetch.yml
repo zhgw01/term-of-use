@@ -1,0 +1,13 @@
+name: Fetch file
+
+on: [push]
+
+jobs:
+  fetch-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: foxtrotperry/fetch-file-action@v0
+        with:
+          url: 'https://policies.google.com/terms?hl=zh-CN&fg=1'
+          path: './google'
+          filename: 'terms.html'
