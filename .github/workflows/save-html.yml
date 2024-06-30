@@ -24,18 +24,9 @@ jobs:
 
     - name: Print Working Directory
       run: pwd  # On Unix-like system
-
-    - name: git status
-      run: git status
-
-    - name: git add
-      run: git add .
-
-    - name: git status again
-      run: git status
         
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Update HTML
-        file_pattern: '**/*.html'
+        file_pattern: '*.html'
