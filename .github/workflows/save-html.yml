@@ -8,10 +8,13 @@ on:
 jobs:
   save-html:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       
     - name: Save HTML
       env:
@@ -20,7 +23,7 @@ jobs:
         curl "$URL" > google-terms.html
         
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Update HTML
-        file_pattern: google-terms.html
+        file_pattern: '**/*.html'
