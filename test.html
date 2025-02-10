@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Collector</title>
+</head>
+<body>
+    <h1>Enter a URL</h1>
+    <form id="urlForm">
+        <label for="urlInput">URL:</label>
+        <input type="url" id="urlInput" name="urlInput" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const url = document.getElementById('urlInput').value;
+            console.log('Collected URL:', url);
+            window.location.href = url; // Redirect to the submitted URL
+        });
+    </script>
+</body>
+</html>
